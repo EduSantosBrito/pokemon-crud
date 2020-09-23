@@ -1,0 +1,39 @@
+body * {
+    font-weight: 300;
+    line-height: 1;
+    color: $color-black;
+    font-family: Open Sans, sans-serif;
+}
+
+h1 {
+    letter-spacing: 0;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 3rem;
+    line-height: 4rem;
+}
+
+h2 {
+    letter-spacing: 0;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+label, span {
+    letter-spacing: 0;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+}
+
+p {
+    letter-spacing: 0;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 3rem;
+}

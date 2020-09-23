@@ -1,0 +1,26 @@
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 3.5rem 0;
+    max-width: 90%;
+    > h2 {
+        color: $color-neutral-700;
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        height: 1px;
+        width: 15rem;
+        border-bottom: 1px solid $color-neutral-500;
+    }
+
+    &::before {
+        margin-right: 2rem;
+    }
+
+    &::after {
+        margin-left: 2rem;
+    }
+}

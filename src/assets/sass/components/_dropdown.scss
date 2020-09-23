@@ -1,0 +1,35 @@
+.dropdown {
+    width: 100%;
+    padding: 1.2rem 0 1.2rem 0.8rem;
+    background: $color-neutral;
+    border: 2px solid $color-neutral-400;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    color: $color-neutral-500;
+
+    &__container {
+        position: relative;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transform: translateY(-50%);
+        width: 2.5rem;
+        height: auto;
+        pointer-events: none;
+    }
+
+    &__option {
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 2.4rem;
+        color: $color-neutral-500;
+    }
+}

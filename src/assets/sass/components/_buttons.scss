@@ -1,0 +1,33 @@
+.btn {
+    padding: 1.6rem 2.4rem;
+    background-color: $color-action-default;
+    border: 1px solid $color-action-default;
+    border-radius: 4.2rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    text-align: center;
+    color: $color-neutral;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+        background-color: $color-action-dark;
+    }
+
+    &:disabled {
+        filter: grayscale(1);
+        &:hover {
+            background-color: $color-action-default;
+        }
+    }
+
+    &--icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 6.4rem;
+        height: 6.4rem;
+        border: 4px solid $color-action-dark;
+    }
+}

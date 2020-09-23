@@ -1,0 +1,22 @@
+.home {
+    width: 100vw;
+    height: 100vh;
+    background: $gradient;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.home__logo {
+    width: 27rem;
+    margin-bottom: 32px;
+}
+
+.home__button {
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+    font-size: 2rem;
+    box-shadow: 0 20px 32px rgba(9, 30, 66, 0.25);
+}

@@ -1,0 +1,45 @@
+.character {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    &__button {
+        background-color: transparent;
+        border: none;
+    }
+    &__image {
+        cursor: pointer;
+        content: url('../../images/ashFront.png');
+        &.on-movement {
+            animation: characterMovement 1000ms infinite;
+        }
+        &.stopped {
+            content: url('../../images/ashStop.png');
+        }
+    }
+
+    &__tooltip {
+        opacity: 0;
+        margin-left: 10px;
+        transition: opacity 300ms;
+        content: url('../../images/searchTooltip.png');
+        &.searching {
+            opacity: 1;
+            content: url('../../images/searchingTooltip.png');
+        }
+        &.found {
+            opacity: 0;
+            content: url('../../images/searchingTooltip.png');
+        }
+        &.error {
+            opacity: 1;
+            content: url('../../images/tooltipError.png');
+        }
+    }
+    &:hover > &__tooltip:not(.searching):not(.found):not(.error) {
+        animation: slide-up 500ms;
+        opacity: 1;
+    }
+}

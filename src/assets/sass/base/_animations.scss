@@ -1,0 +1,60 @@
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slide-down {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes characterMovement {
+    0% {
+        content: url('../../images/ashStop.png');
+    }
+    25% {
+        content: url('../../images/ashRightLeg.png');
+    }
+    50% {
+        content: url('../../images/ashStop.png');
+    }
+    75% {
+        content: url('../../images/ashLeftLeg.png');
+    }
+    100% {
+        content: url('../../images/ashStop.png');
+    }
+}

@@ -1,0 +1,22 @@
+.loading {
+    width: 100%;
+    height: 100vh;
+    background: $gradient;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:after {
+        content: '';
+        position: fixed;
+        width: $loading-size;
+        height: $loading-size;
+        border: solid 5px #fff;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-radius: 50%;
+        top: calc(50% - $loading-size / 2);
+        left: calc(50% - $loading-size / 2);
+        animation: rotate 1s linear infinite;
+    }
+}

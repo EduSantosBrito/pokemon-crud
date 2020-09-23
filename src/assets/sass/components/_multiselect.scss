@@ -1,0 +1,114 @@
+.multiselect {
+    width: 100%;
+    button {
+        background-color: transparent;
+        border: none;
+    }
+    &__icon {
+        position: absolute;
+        top: 50%;
+        right: 1rem;
+        transition: transform 300ms;
+        transform: translateY(-50%);
+        width: 2.5rem;
+        height: auto;
+        pointer-events: none;
+        &.open {
+            transform: rotate(180deg) translateY(50%);
+        }
+    }
+    &__input {
+        width: 100%;
+        padding: 1.2rem 0 1.2rem 0.8rem;
+        background: $color-neutral;
+        border: 2px solid $color-neutral-400;
+        border-radius: 3px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 2.4rem;
+        color: $color-neutral-500;
+        position: relative;
+        div {
+            cursor: pointer;
+        }
+        &--selected {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 90%;
+        }
+    }
+    &__chip {
+        background-color: $color-neutral-400;
+        width: 80px;
+        height: 24px;
+        margin: 0.5rem;
+        padding: 0.4rem 1rem;
+        border-radius: 42px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        > p {
+            font-size: 1rem;
+            @include respond(big-desk) {
+                font-size: 0.7rem;
+            }
+            color: $color-neutral-700;
+            text-transform: uppercase;
+        }
+        img {
+            width: 0.8rem;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(-150%, -50%);
+            cursor: pointer;
+            @include respond(big-desk) {
+                width: 0.6rem;
+            }
+        }
+    }
+    &__label {
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 2.4rem;
+        color: $color-neutral-500;
+        text-align: start;
+    }
+    &__options {
+        margin-top: 4px;
+        transition: opacity 500ms;
+        animation: fade-in 500ms;
+        width: 100%;
+        padding: 1.2rem 0 1.2rem 0.8rem;
+        background: $color-neutral;
+        border: 2px solid $color-neutral-400;
+        border-radius: 3px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        position: -webkit-sticky;
+        position: sticky;
+        box-shadow: 0px 4px 8px rgba(9, 30, 66, 0.25);
+        &-item {
+            width: 100%;
+            text-align: start;
+            font-weight: 600;
+            font-size: 1.5rem;
+            line-height: 2.4rem;
+            color: $color-neutral-700;
+            cursor: pointer;
+            &.selected {
+                background: $color-neutral-300;
+            }
+            &:hover {
+                background: $color-neutral-300;
+            }
+        }
+    }
+}

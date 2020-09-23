@@ -1,0 +1,86 @@
+.input {
+    width: 100%;
+    padding: 1.2rem 0 1.2rem 0.8rem;
+    background: $color-neutral;
+    border: 2px solid $color-neutral-400;
+    border-radius: 3px;
+    overflow: hidden;
+
+    &::placeholder {
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 2.4rem;
+        color: $color-neutral-500;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        margin-bottom: 0.6rem;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+
+    &__suffix {
+        position: absolute;
+        right: 3.5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 2.4rem;
+        color: $color-neutral-700;
+    }
+
+    &__number {
+        position: relative;
+    }
+
+    &__btns {
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 2.4rem;
+        background-color: $color-neutral-400;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        > button {
+            background-color: transparent;
+            border: none;
+        }
+    }
+
+    &__increase,
+    &__decrease {
+        width: 2.1rem;
+        transition: all .2s;
+
+        &:hover {
+            background-color: $color-neutral-500;
+            cursor: pointer;
+        }
+    }
+
+    &__increase {
+        transform: rotate(180deg);
+    }
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

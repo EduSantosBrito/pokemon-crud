@@ -1,0 +1,87 @@
+.capture {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__name {
+        color: $color-neutral-700;
+        text-transform: uppercase;
+    }
+    &__stats {
+        margin-top: 16px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        &-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-right: 1px solid $color-neutral-500;
+            &:last-child {
+                border: none;
+            }
+            & > * {
+                color: $color-neutral-700;
+                text-align: center;
+            }
+        }
+    }
+    &__types {
+        padding: 0px 2rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        &-item {
+            width: 10rem;
+            height: 4rem;
+            margin: 0 1rem;
+            padding: 1rem 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 42px;
+            > p {
+                font-size: 1.5rem;
+                color: $color-neutral;
+                text-transform: uppercase;
+            }
+        }
+    }
+    &__abilities {
+        > p {
+            word-wrap: break-word;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            color: $color-neutral-700;
+        }
+    }
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: 16px;
+        button {
+            background-color: transparent;
+            border: none;
+        }
+        &--disabled {
+            img {
+                filter: grayscale(1);
+            }
+        }
+        img {
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+        img:hover {
+            transform: scale(1.2);
+        }
+    }
+}

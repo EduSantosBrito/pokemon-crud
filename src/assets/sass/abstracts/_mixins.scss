@@ -1,0 +1,39 @@
+// MEDIA QUERIES CHANGES FONT-SIZE
+@mixin respond($breakpoint) {
+    // bootstrap xs
+    @if $breakpoint==phone {
+        @media only screen and (max-width: 575.98px) {
+            @content
+        };
+    }
+    // bootstrap sm
+    @if $breakpoint==tab-port {
+        @media only screen and (min-width: 576px) and (max-width: 767.98px) {
+            @content
+        };
+    }
+    // bootstrap md
+    @if $breakpoint==tab-land {
+        @media only screen and (min-width: 768px) and (max-width: 991.98px) {
+            @content
+        };
+    }
+    // bootstrap lg
+    @if $breakpoint==desk {
+        @media only screen and (min-width: 992px) and (max-width: 1199.98px) {
+            @content
+        };
+    }
+    // bootstrap xl
+    @if $breakpoint==med-desk {
+        @media only screen and (min-width: 1200px) and (max-width: 1439.98px) {
+            @content
+        };
+    }
+    // full HD displays
+    @if $breakpoint==big-desk {
+        @media only screen and (min-width: 1440px) {
+            @content
+        };
+    }
+}

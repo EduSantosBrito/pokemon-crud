@@ -1,0 +1,72 @@
+// BASIC RESET
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+*,
+h1::after,
+h2::after,
+h3::after,
+h4::after,
+h5::after,
+h6::after,
+p::after,
+ul::after,
+*::after,
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before,
+p::before,
+ul::before,
+*::before {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:active,
+*:focus {
+    outline: none !important;
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+    box-sizing: border-box;
+}
+
+html {
+    @include respond(big-desk) {
+        // 1440px < width
+        font-size: 75%; // 1rem = 12px
+    }
+    @include respond(med-desk) {
+        // 1200px < width < 1439.98px
+        font-size: 62.5%; // 1rem = 10px
+    }
+    @include respond(desk) {
+        // 992px < width < 1199.98px
+        font-size: 56.25%; // 1rem = 9px
+    }
+    @include respond(tab-land) {
+        // 768px < width < 991.98px
+        font-size: 56.25%; // 1rem = 9px
+    }
+    @include respond(tab-port) {
+        // 576 width < 767.98px
+        font-size: 50%; // 1rem = 8px
+    }
+    @include respond(phone) {
+        // width > 575.98px
+        font-size: 50%; // 1rem = 8px
+    }
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
